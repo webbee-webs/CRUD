@@ -43,7 +43,7 @@
                             <h6>Modificar registro</h6>
                             <input type="number" id="inputPutId" class="form-control"
                                 placeholder="ID del registro a modificar">
-                            <button id="btnPut" class="btn btn-warning position-absolute bottom-0 mb-3" disabled>
+                            <button id="btnPut" data-bs-toggle="modal" data-bs-target="#dataModal" class="btn btn-warning position-absolute bottom-0 mb-3" disabled>
                                 Modificar</button>
                         </div>
                     </div>
@@ -65,7 +65,12 @@
 
                 </ul>
             </div>
-        </div>
+
+            <!---------------------------------- error -------------------------------- -->
+    <div id="error" class="alert alert-danger alert-dismissible fade" role="alert">
+    Algo salió mal...
+            </div>
+        
     </main>
     <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
@@ -85,8 +90,8 @@
                     <input type="text" id="inputPutApellido" class="form-control my-1">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" id="btnSendChanges" disabled>Guardar</button>
+                    <button type="button" class="btn btn-secondary" id="cancelChanges" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnSendChanges" data-bs-dismiss="modal">Guardar</button>
                 </div>
             </div>
         </div>
